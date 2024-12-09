@@ -1,8 +1,23 @@
-<h2>Users works!</h2>
-<ul>
-  <li>
-    <h1>{{ user.firstName }} {{ user.lastName }}</h1>
-    <p>Date of Birth : <span [innerText]="user.dob"></span></p>
-    <p>Income : <span [innerText]="user.income"></span></p>
-  </li>
-</ul>
+<div class="container">
+  <ul class="list-unstyled list-group">
+    <li class="list-group-item">
+      <div class="row">
+        <div class="col-4 p-3 text-center">
+          <img
+            [src]="user.avatar"
+            [alt]="user.firstName"
+            class="rounded-circle img-fluid mb-4"
+          />
+          <button class="btn btn-info" (click)="onMoreInfo(user)">
+            More Info
+          </button>
+        </div>
+        <div class="col-8">
+          <h1>{{ user.firstName }} {{ user.lastName }}</h1>
+          <p>Date of Birth : <span [innerText]="user.dob"></span></p>
+          <p>Income : <span [innerText]="user.income"></span></p>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>

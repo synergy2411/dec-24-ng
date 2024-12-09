@@ -14,5 +14,10 @@ export class UsersComponent {
     isWorking: true,
     dob: new Date('Dec 21, 1964'),
     income: 50000,
+    avatar: './assets/avatars/bill.jpg',
   };
+
+  onMoreInfo(theUser: any) {
+    alert(`Mr. ${theUser.lastName} is working with ${theUser.company}!`);
+  }
 }
