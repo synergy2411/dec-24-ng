@@ -1,1 +1,9 @@
-<p>user-info works!</p>
+<ng-content select="header"></ng-content>
+
+<h1>{{ user.firstName }} {{ user.lastName }}</h1>
+<p>Date of Birth : <span [innerText]="user.dob"></span></p>
+<p>Income : <span [innerText]="user.income"></span></p>
+<p>Total Votes : {{ user.votes }}</p>
+<input type="number" [(ngModel)]="user.votes" />
+
+<ng-content select="footer"></ng-content>

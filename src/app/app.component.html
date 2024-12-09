@@ -1,4 +1,9 @@
 <h1>Angular App Works!!!</h1>
 
+<button class="btn btn-primary" (click)="toggle = !toggle">Toggle</button>
+
 <hr />
-<app-users></app-users>
+
+<app-life-cycle-demo *ngIf="toggle" [title]="title"></app-life-cycle-demo>
+
+<!-- <app-users></app-users> -->
