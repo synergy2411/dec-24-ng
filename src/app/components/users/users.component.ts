@@ -15,6 +15,7 @@ export class UsersComponent {
     dob: new Date('Dec 21, 1964'),
     income: 50000,
     avatar: './assets/avatars/bill.jpg',
+    votes: 120,
   };
 
   onMoreInfo(theUser: any) {
