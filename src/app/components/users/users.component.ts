@@ -10,10 +10,10 @@ import { USER_DATA } from '../../db/mocks';
   // changeDetection: ChangeDetectionStrategy.Default
 })
 export class UsersComponent implements OnInit {
-  user!: User;
+  users!: Array<User>;
 
   ngOnInit(): void {
-    this.user = USER_DATA;
+    this.users = USER_DATA;
   }
 
   onMoreInfo(theUser: User) {
