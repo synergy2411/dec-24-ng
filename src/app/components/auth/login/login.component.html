@@ -6,7 +6,7 @@
           <h3>Login Here</h3>
         </div>
         <div class="card-body">
-          <form>
+          <form #loginForm="ngForm" (submit)="onSubmitForm(loginForm)">
             <!-- email -->
             <div class="form-floating mb-3">
               <input
@@ -15,6 +15,9 @@
                 name="email"
                 id="email"
                 placeholder=""
+                ngModel
+                required
+                email
               />
               <label for="email">Email</label>
             </div>
@@ -24,9 +27,12 @@
               <input
                 type="password"
                 class="form-control"
-                name="passwod"
+                name="password"
                 id="passwod"
                 placeholder=""
+                minlength="6"
+                required
+                ngModel
               />
               <label for="passwod">Password</label>
             </div>
@@ -35,12 +41,24 @@
             <div class="row">
               <div class="col-6">
                 <div class="d-grid">
-                  <button class="btn btn-primary">Login</button>
+                  <button
+                    type="submit"
+                    class="btn btn-primary"
+                    [disabled]="!loginForm.valid"
+                  >
+                    Login
+                  </button>
                 </div>
               </div>
               <div class="col-6">
                 <div class="d-grid">
-                  <button class="btn btn-secondary">Reset</button>
+                  <button
+                    class="btn btn-secondary"
+                    type="button"
+                    (click)="loginForm.reset()"
+                  >
+                    Reset
+                  </button>
                 </div>
               </div>
             </div>
