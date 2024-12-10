@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
   selector: 'app-users',
   templateUrl: './users.component.html',
   styleUrl: './users.component.css',
   standalone: false,
+  // changeDetection: ChangeDetectionStrategy.Default
 })
 export class UsersComponent {
   user = {

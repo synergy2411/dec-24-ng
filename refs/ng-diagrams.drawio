@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36" version="25.0.1" pages="4">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36" version="25.0.1" pages="5">
   <diagram name="Page-1" id="PNYIMiN4enTAW9c-Qkue">
     <mxGraphModel dx="607" dy="365" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -160,6 +160,71 @@
         </mxCell>
         <mxCell id="P6Bdn8qatPzHTwqeqGTg-12" value="Nested Component Communication" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
           <mxGeometry x="364" y="40" width="100" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="zrgXdw0X7d7sORQV2trZ" name="Page-5">
+    <mxGraphModel dx="691" dy="416" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="zUqPdhvyWQC292VBGtpM-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="zUqPdhvyWQC292VBGtpM-1" target="zUqPdhvyWQC292VBGtpM-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zUqPdhvyWQC292VBGtpM-1" value="App" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="160" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="zUqPdhvyWQC292VBGtpM-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="zUqPdhvyWQC292VBGtpM-2" target="zUqPdhvyWQC292VBGtpM-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zUqPdhvyWQC292VBGtpM-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="zUqPdhvyWQC292VBGtpM-2" target="zUqPdhvyWQC292VBGtpM-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zUqPdhvyWQC292VBGtpM-2" value="Users" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="300" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="zUqPdhvyWQC292VBGtpM-4" value="UsersInfo" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="235" y="440" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="zUqPdhvyWQC292VBGtpM-6" value="UsersImage" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="405" y="440" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="zUqPdhvyWQC292VBGtpM-8" value="AppChangeDetection" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="390" y="190" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="zUqPdhvyWQC292VBGtpM-9" value="" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="500" y="480" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="zUqPdhvyWQC292VBGtpM-10" value="" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="310" y="480" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="zUqPdhvyWQC292VBGtpM-11" value="" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="330" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="zUqPdhvyWQC292VBGtpM-12" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="185" y="170" as="sourcePoint" />
+            <mxPoint x="180" y="490" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zUqPdhvyWQC292VBGtpM-13" value="prevValue === currValue" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="465" y="158" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="zUqPdhvyWQC292VBGtpM-14" value="Dirty Checking" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#6c8ebf;fillColor=#dae8fc;" vertex="1" parent="1">
+          <mxGeometry x="610" y="158" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="zUqPdhvyWQC292VBGtpM-15" value="prevValue === currValue" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="450" y="300" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="zUqPdhvyWQC292VBGtpM-16" value="prevValue = currValue" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="500" y="335" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="zUqPdhvyWQC292VBGtpM-17" value="Angular Change Detection - Digest Cycle" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="330" y="90" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="zUqPdhvyWQC292VBGtpM-18" value="ChangeDetectionStrategies&lt;div&gt;- Default&lt;/div&gt;&lt;div&gt;- OnPush&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="140" y="580" width="170" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
