@@ -22,4 +22,8 @@ export class PipeDemoComponent {
   });
 
   contactNumber = 9876543210;
+
+  onAddTodo() {
+    this.todoCollection.push({ label: 'New Todo', status: 'pending' });
+  }
 }
