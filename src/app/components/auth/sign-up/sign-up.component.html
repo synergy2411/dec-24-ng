@@ -6,7 +6,7 @@
           <h3 class="text-center">Sign Up Form</h3>
         </div>
         <div class="card-body">
-          <form>
+          <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
             <!-- email -->
             <div class="form-floating mb-3">
               <input
@@ -15,8 +15,17 @@
                 name="email"
                 id="email"
                 placeholder=""
+                [formControl]="email"
               />
               <label for="email">Email</label>
+            </div>
+            <div *ngIf="!email.valid && email.dirty && email.touched">
+              <div *ngIf="email.hasError('required')">
+                <p class="alert alert-danger">Email is mandatory.</p>
+              </div>
+              <div *ngIf="email.hasError('email')">
+                <p class="alert alert-danger">Email is not in proper format.</p>
+              </div>
             </div>
 
             <!-- password -->
@@ -27,20 +36,41 @@
                 name="password"
                 id="password"
                 placeholder=""
+                [formControl]="password"
               />
               <label for="password">Password</label>
             </div>
-
+            <div *ngIf="!password.valid && password.dirty && password.touched">
+              <div *ngIf="password.hasError('required')">
+                <p class="alert alert-danger">Password is mandatory.</p>
+              </div>
+              <div *ngIf="password.hasError('minlength')">
+                <p class="alert alert-danger">
+                  Password should have at least 6 characters.
+                </p>
+              </div>
+            </div>
             <!-- buttons -->
             <div class="row">
               <div class="col">
                 <div class="d-grid">
-                  <button class="btn btn-success">Sign Up</button>
+                  <button
+                    type="submit"
+                    [disabled]="!signUpForm.valid"
+                    class="btn btn-success"
+                  >
+                    Sign Up
+                  </button>
                 </div>
               </div>
               <div class="col">
                 <div class="d-grid">
-                  <button class="btn btn-secondary">Reset</button>
+                  <button
+                    class="btn btn-secondary"
+                    (click)="signUpForm.reset()"
+                  >
+                    Reset
+                  </button>
                 </div>
               </div>
             </div>
