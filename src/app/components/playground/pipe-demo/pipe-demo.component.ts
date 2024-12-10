@@ -11,4 +11,6 @@ export class PipeDemoComponent {
       resolve('Data from Promise');
     }, 3000);
   });
+
+  contactNumber = 9876543210;
 }
