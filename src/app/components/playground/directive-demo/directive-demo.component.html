@@ -3,51 +3,77 @@
 
   <h2>Structural Directives</h2>
 
-  <!-- ngFor -->
+  <!-- ngSwitch -->
+  <div class="mb-4">
+    <h3>Ng Switch</h3>
+    <ul class="nav nav-tab mb-3">
+      <li class="nav-item">
+        <a class="nav-link" (click)="tab = 1">Tab 1</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" (click)="tab = 2">Tab 2</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" (click)="tab = 3">Tab 3</a>
+      </li>
+    </ul>
+    <div [ngSwitch]="tab">
+      <div *ngSwitchCase="1">Case 1</div>
+      <div *ngSwitchCase="2">Case 2</div>
+      <div *ngSwitchCase="3">Case 3</div>
+      <div *ngSwitchDefault>Default Case</div>
+    </div>
+  </div>
 
-  <table class="table">
-    <thead>
-      <tr>
-        <th>#</th>
-        <th>Name</th>
-        <th>First</th>
-        <th>Last</th>
-        <th>Even</th>
-        <th>Odd</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr
-        *ngFor="
-          let friend of friends;
-          index as id;
-          first as isFirst;
-          last as isLast;
-          even as isEven;
-          odd as isOdd
-        "
-      >
-        <td>{{ id + 1 }}</td>
-        <td>{{ friend }}</td>
-        <td>{{ isFirst }}</td>
-        <td>{{ isLast }}</td>
-        <td>{{ isEven }}</td>
-        <td>{{ isOdd }}</td>
-      </tr>
-    </tbody>
-  </table>
+  <!-- ngFor -->
+  <div class="mb-4">
+    <h3>Ng For</h3>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>First</th>
+          <th>Last</th>
+          <th>Even</th>
+          <th>Odd</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          *ngFor="
+            let friend of friends;
+            index as id;
+            first as isFirst;
+            last as isLast;
+            even as isEven;
+            odd as isOdd
+          "
+        >
+          <td>{{ id + 1 }}</td>
+          <td>{{ friend }}</td>
+          <td>{{ isFirst }}</td>
+          <td>{{ isLast }}</td>
+          <td>{{ isEven }}</td>
+          <td>{{ isOdd }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
   <!-- ngIf -->
-  <p *ngIf="product.isAvailable; else productNotAvailable">
-    This paragraph will be toggled
-    <br />
-    {{ product.name }} - {{ product.qty }}
-  </p>
+  <div class="mb-4">
+    <h3>Ng If</h3>
+    <p *ngIf="product.isAvailable; else productNotAvailable">
+      This paragraph will be toggled
+      <br />
+      {{ product.name }} - {{ product.qty }}
+    </p>
 
-  <ng-template #productNotAvailable>
-    <p>The Product is out of stock.</p>
-  </ng-template>
-
+    <ng-template #productNotAvailable>
+      <p>The Product is out of stock.</p>
+    </ng-template>
+  </div>
   <hr />
 
   <h2>Attribute Directives</h2>

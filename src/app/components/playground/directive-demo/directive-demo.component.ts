@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
   standalone: false,
 })
 export class DirectiveDemoComponent {
+  tab = 0;
+
   friends = ['Monica', 'Rachel', 'Chandler', 'Joey', 'Ross'];
 
   product = {
