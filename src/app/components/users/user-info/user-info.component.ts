@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { User } from '../../../model/user.model';
 
 @Component({
   selector: 'app-user-info',
@@ -7,5 +8,5 @@ import { Component, Input } from '@angular/core';
   standalone: false,
 })
 export class UserInfoComponent {
-  @Input() user: any;
+  @Input() user!: User;
 }

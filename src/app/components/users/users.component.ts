@@ -1,4 +1,6 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { User } from '../../model/user.model';
+import { USER_DATA } from '../../db/mocks';
 
 @Component({
   selector: 'app-users',
@@ -7,19 +9,14 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   standalone: false,
   // changeDetection: ChangeDetectionStrategy.Default
 })
-export class UsersComponent {
-  user = {
-    firstName: 'bill',
-    lastName: 'gates',
-    company: 'microsoft',
-    isWorking: true,
-    dob: new Date('Dec 21, 1964'),
-    income: 50000,
-    avatar: './assets/avatars/bill.jpg',
-    votes: 120,
-  };
+export class UsersComponent implements OnInit {
+  user!: User;
 
-  onMoreInfo(theUser: any) {
+  ngOnInit(): void {
+    this.user = USER_DATA;
+  }
+
+  onMoreInfo(theUser: User) {
     alert(`Mr. ${theUser.lastName} is working with ${theUser.company}!`);
   }
 }
