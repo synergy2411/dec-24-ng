@@ -7,7 +7,23 @@ import { Component } from '@angular/core';
   standalone: false,
 })
 export class DirectiveDemoComponent {
+  friends = ['Monica', 'Rachel', 'Chandler', 'Joey', 'Ross'];
+
+  product = {
+    name: 'iPhone',
+    qty: 200,
+    isAvailable: false,
+  };
+
   dynamicTheme = { backgroundColor: 'blue', color: '#fff' };
+  dynamicClasses = { feature: true, 'my-border': false };
+
+  onClassEnter() {
+    this.dynamicClasses.feature = !this.dynamicClasses.feature;
+  }
+  onClassLeave() {
+    this.dynamicClasses['my-border'] = !this.dynamicClasses['my-border'];
+  }
 
   onEnter() {
     this.dynamicTheme = { backgroundColor: '#fff', color: 'blue' };
