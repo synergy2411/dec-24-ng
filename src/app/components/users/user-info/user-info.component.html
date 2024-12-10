@@ -1,14 +1,18 @@
-<ng-content select="header"></ng-content>
+<!-- <ng-content select="header"></ng-content> -->
 
-<h1>{{ user.firstName }} {{ user.lastName }}</h1>
-<p>Date of Birth : <span [innerText]="user.dob"></span></p>
-<p *ngIf="user.isWorking; else UserNotWorkingTemplate">
-  Income : <span [innerText]="user.income"></span>
+<!-- {{ user | json }} -->
+
+<h1>{{ user.firstName | titlecase }} {{ user.lastName | titlecase }}</h1>
+<p>
+  Date of Birth : <span [innerText]="user.dob | date : 'dd-MM-yyyy'"></span>
 </p>
-<p>Total Votes : {{ user.votes }}</p>
+<p *ngIf="user.isWorking; else UserNotWorkingTemplate">
+  Income : <span [innerText]="user.income | currency : 'INR'"></span>
+</p>
+<p>Total Votes : {{ user.votes | number : "2.1-3" }}</p>
 <input type="number" [(ngModel)]="user.votes" />
 
-<ng-content select="footer"></ng-content>
+<!-- <ng-content select="footer"></ng-content> -->
 
 <ng-template #UserNotWorkingTemplate>
   <p>Mr. {{ user.firstName.toUpperCase() }} is not working now!</p>
