@@ -13,6 +13,7 @@ import { PipeDemoComponent } from './components/playground/pipe-demo/pipe-demo.c
 import { CountryCodePipe } from './pipes/country-code.pipe';
 import { FilterPipe } from './pipes/filter.pipe';
 import { LoginComponent } from './components/auth/login/login.component';
+import { SignUpComponent } from './components/auth/sign-up/sign-up.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { LoginComponent } from './components/auth/login/login.component';
     CountryCodePipe,
     FilterPipe,
     LoginComponent,
+    SignUpComponent,
   ],
   imports: [BrowserModule, FormsModule],
   providers: [],
