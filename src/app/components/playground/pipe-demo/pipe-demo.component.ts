@@ -6,6 +6,15 @@ import { Component } from '@angular/core';
   styleUrl: './pipe-demo.component.css',
 })
 export class PipeDemoComponent {
+  todoCollection = [
+    { label: 'shopping', status: 'pending' },
+    { label: 'grocery', status: 'completed' },
+    { label: 'insurance', status: 'pending' },
+    { label: 'planting', status: 'completed' },
+  ];
+
+  filteredStatus = '';
+
   promise = new Promise((resolve) => {
     setTimeout(() => {
       resolve('Data from Promise');

@@ -2,6 +2,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
   name: 'countryCode',
+  pure: true,
 })
 export class CountryCodePipe implements PipeTransform {
   transform(contactNumber: number, code?: string): string {
