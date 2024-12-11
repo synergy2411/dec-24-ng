@@ -21,4 +21,13 @@ export class PostsComponent implements OnInit {
       this.posts.push(data);
     });
   }
+
+  onDeletePost(postId?: string) {
+    this.postService.deletePost(postId).subscribe(() => {
+      const position = this.posts.findIndex((post) => post.id === postId);
+      if (position >= 0) {
+        this.posts.splice(position, 1);
+      }
+    });
+  }
 }
