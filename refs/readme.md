@@ -145,3 +145,10 @@ todoCollection.push(newItem);
 ---
 
 # Day 03
+
+- ng g s services/data
+
+- Service Registration
+  - Root Module : Singleton instance will be available to all the components
+  - Root Component: Singleton instance will be available to all the components of the app
+  - Any other component: Singleton instance will be available to self and children components
