@@ -1,13 +1,38 @@
-import { Component } from '@angular/core';
-import { Observable, Subscription } from 'rxjs';
+import { Component, OnInit } from '@angular/core';
+import {
+  Observable,
+  Subscription,
+  interval,
+  take,
+  filter,
+  map,
+  from,
+  of,
+} from 'rxjs';
 
 @Component({
   selector: 'app-observable-demo',
   templateUrl: './observable-demo.component.html',
   styleUrl: './observable-demo.component.css',
 })
-export class ObservableDemoComponent {
+export class ObservableDemoComponent implements OnInit {
   unSubs$!: Subscription;
+
+  interval$ = interval(1000);
+
+  fromPromise$ = from(
+    new Promise((resolve) => setTimeout(() => resolve(101), 2000))
+  );
+
+  of$ = of(['Monica', 'Joey', 'Ross', 'Rachel']);
+
+  fromArray$ = from(['Monica', 'Joey', 'Ross', 'Rachel']);
+
+  ngOnInit(): void {
+    this.fromPromise$.subscribe(console.log);
+    this.fromArray$.subscribe(console.log);
+    this.of$.subscribe(console.log);
+  }
 
   simpleObj$ = new Observable((observer) => {
     observer.next(101);
@@ -27,6 +52,18 @@ export class ObservableDemoComponent {
       observer.complete();
     }, 5000);
   });
+
+  onSubscribeInterval() {
+    this.interval$
+      .pipe(
+        take(5),
+        filter((value) => value % 2 == 0),
+        map((value) => value * 10)
+      )
+      .subscribe({
+        next: (data) => console.log(data),
+      });
+  }
 
   onSubscribeSimpleObs() {
     console.log('Before starting Observable');
