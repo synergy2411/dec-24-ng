@@ -14,6 +14,7 @@ import { CountryCodePipe } from './pipes/country-code.pipe';
 import { FilterPipe } from './pipes/filter.pipe';
 import { LoginComponent } from './components/auth/login/login.component';
 import { SignUpComponent } from './components/auth/sign-up/sign-up.component';
+import { ObservableDemoComponent } from './components/playground/observable-demo/observable-demo.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { SignUpComponent } from './components/auth/sign-up/sign-up.component';
     FilterPipe,
     LoginComponent,
     SignUpComponent,
+    ObservableDemoComponent,
   ],
   imports: [BrowserModule, FormsModule, ReactiveFormsModule],
   providers: [],

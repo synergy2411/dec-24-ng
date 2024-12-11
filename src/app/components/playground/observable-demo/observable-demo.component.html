@@ -1,0 +1,11 @@
+<div class="container">
+  <h1>Observable Demo Component</h1>
+  <button class="btn btn-primary" (click)="onSubscribeSimpleObs()">
+    Subscribe
+  </button>
+  <button (click)="onUnsubscribeSimpleObs()" class="btn btn-secondary">
+    Unsubscribe
+  </button>
+
+  <h3>Observable Data : {{ simpleObj$ | async }}</h3>
+</div>

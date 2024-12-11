@@ -152,3 +152,20 @@ todoCollection.push(newItem);
   - Root Module : Singleton instance will be available to all the components
   - Root Component: Singleton instance will be available to all the components of the app
   - Any other component: Singleton instance will be available to self and children components
+
+# Promises vs Observables
+
+- Promises
+  - One shot (resolved / rejected)
+  - Eagerly executed
+  - Not cancellable
+  - Does not support operators
+  - Always asynchronous
+  - Part of ECMA Specification
+- Observables
+  - Stream (series) of events; not one shot
+  - Lazily executed (until subscribe)
+  - Are Cancellable
+  - Powerful opertors
+  - Both synchronous as well as asynchronous
+  - NOT Part of ECMA Specification; Need support of third party library - RxJS
