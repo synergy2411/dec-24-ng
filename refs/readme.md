@@ -163,9 +163,21 @@ todoCollection.push(newItem);
   - Always asynchronous
   - Part of ECMA Specification
 - Observables
+
   - Stream (series) of events; not one shot
   - Lazily executed (until subscribe)
   - Are Cancellable
-  - Powerful opertors
+  - Powerful operators
   - Both synchronous as well as asynchronous
   - NOT Part of ECMA Specification; Need support of third party library - RxJS
+
+- Observable : pipe(), subscribe()
+- Observer: next(), error(), complete()
+- Subjects : Observables + Observers
+
+# JSON Server
+
+- npm install -g json-server@0.17.4
+- json-server -v
+- create db.json file
+- json-server --watch db.json

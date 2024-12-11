@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { UsersComponent } from './components/users/users.component';
@@ -16,6 +17,7 @@ import { LoginComponent } from './components/auth/login/login.component';
 import { SignUpComponent } from './components/auth/sign-up/sign-up.component';
 import { ObservableDemoComponent } from './components/playground/observable-demo/observable-demo.component';
 import { ObservableSubjectDemoComponent } from './components/playground/observable-subject-demo/observable-subject-demo.component';
+import { PostsComponent } from './components/posts/posts.component';
 
 @NgModule({
   declarations: [
@@ -33,8 +35,9 @@ import { ObservableSubjectDemoComponent } from './components/playground/observab
     SignUpComponent,
     ObservableDemoComponent,
     ObservableSubjectDemoComponent,
+    PostsComponent,
   ],
-  imports: [BrowserModule, FormsModule, ReactiveFormsModule],
+  imports: [BrowserModule, FormsModule, ReactiveFormsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })
