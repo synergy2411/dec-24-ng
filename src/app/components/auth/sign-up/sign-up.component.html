@@ -55,6 +55,27 @@
                 </p>
               </div>
             </div>
+
+            <!-- confirm password -->
+            <div class="form-floating mb-3">
+              <input
+                type="password"
+                class="form-control"
+                name="cnfPassword"
+                id="cnfPassword"
+                placeholder=""
+                [formControl]="cnfPassword"
+              />
+              <label for="cnfPassword">Confirm Password</label>
+            </div>
+            <div *ngIf="cnfPassword.touched && !cnfPassword.valid">
+              <div *ngIf="cnfPassword.hasError('cnfPasswordError')">
+                <p class="alert alert-danger">
+                  Password and Confirm password should match.
+                </p>
+              </div>
+            </div>
+
             <!-- buttons -->
             <div class="row">
               <div class="col">
