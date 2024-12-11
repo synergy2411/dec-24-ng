@@ -49,6 +49,11 @@
                   Password should have at least 6 characters.
                 </p>
               </div>
+              <div *ngIf="password.hasError('exclamationError')">
+                <p class="alert alert-danger">
+                  Password should have exclamation (!) sign.
+                </p>
+              </div>
             </div>
             <!-- buttons -->
             <div class="row">

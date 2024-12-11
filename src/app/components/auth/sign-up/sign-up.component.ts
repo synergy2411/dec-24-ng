@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
 import {
+  AbstractControl,
   FormBuilder,
   FormControl,
   FormGroup,
+  ValidationErrors,
   Validators,
 } from '@angular/forms';
 
@@ -16,6 +18,7 @@ export class SignUpComponent {
   password = new FormControl('', [
     Validators.required,
     Validators.minLength(6),
+    SignUpComponent.hasExclamationValidation,
   ]);
 
   signUpForm: FormGroup;
@@ -29,5 +32,12 @@ export class SignUpComponent {
 
   onSubmit() {
     console.log(this.signUpForm);
+  }
+
+  private static hasExclamationValidation(
+    control: AbstractControl
+  ): ValidationErrors | null {
+    const hasExclamation = control.value.indexOf('!') >= 0;
+    return hasExclamation ? null : { exclamationError: true };
   }
 }

@@ -122,3 +122,26 @@ Impure Change : Changing the values
 
 let todoCollection = [];
 todoCollection.push(newItem);
+
+---
+
+# Day 02
+
+- Directives
+- Component Directives: with templates
+- Attribute Directives: ngClass, ngStyle
+- Structural Directives: *ngIf, *ngFor, \*ngSwitch
+- Pipes
+  - Built-in pipes
+  - Custom pipes : Pure & Impure
+- Forms
+  - Template Driven: HTML5 Validation, ngForm
+  - Model Driven/ Reactive Forms: Angular Validation
+- Form and Form Fields - State and Classes
+  - ngValid / ngInvalid
+  - ngPristine / ngDirty
+  - ngTouched / ngUntouched
+
+---
+
+# Day 03
