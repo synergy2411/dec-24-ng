@@ -14,7 +14,9 @@ export class PostService {
     return this.http.get<IPost[]>(this.baseUrl);
   }
 
-  createPost() {}
+  createPost(post: IPost): Observable<IPost> {
+    return this.http.post<IPost>(this.baseUrl, post);
+  }
 
   deletePost() {}
 }

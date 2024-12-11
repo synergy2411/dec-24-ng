@@ -1,0 +1,46 @@
+<div class="row">
+  <div class="col-8 offset-2">
+    <div class="card">
+      <div class="card-header">
+        <h3 class="text-center">Add New Post</h3>
+      </div>
+      <div class="card-body">
+        <form (ngSubmit)="onAddNewPost()">
+          <!-- title -->
+          <div class="form-floating mb-3">
+            <input
+              type="text"
+              class="form-control"
+              name="title"
+              id="title"
+              placeholder=""
+              [(ngModel)]="title"
+            />
+            <label for="title">Title</label>
+          </div>
+
+          <!-- body -->
+          <div class="mb-3">
+            <label for="" class="form-label">Write your message here</label>
+            <textarea
+              class="form-control"
+              name="body"
+              id=""
+              rows="3"
+              [(ngModel)]="body"
+            ></textarea>
+          </div>
+
+          <!-- button -->
+          <div class="row">
+            <div class="col">
+              <div class="d-grid">
+                <button class="btn btn-primary" type="submit">Add</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,5 +1,7 @@
 <div class="container">
   <h1>My Posts</h1>
+  <app-post-form (childEvent)="onAddNewPost($event)"></app-post-form>
+
   <ul>
     <li *ngFor="let post of posts">{{ post.title }} - {{ post.body }}</li>
   </ul>

@@ -18,6 +18,7 @@ import { SignUpComponent } from './components/auth/sign-up/sign-up.component';
 import { ObservableDemoComponent } from './components/playground/observable-demo/observable-demo.component';
 import { ObservableSubjectDemoComponent } from './components/playground/observable-subject-demo/observable-subject-demo.component';
 import { PostsComponent } from './components/posts/posts.component';
+import { PostFormComponent } from './components/posts/post-form/post-form.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { PostsComponent } from './components/posts/posts.component';
     ObservableDemoComponent,
     ObservableSubjectDemoComponent,
     PostsComponent,
+    PostFormComponent,
   ],
   imports: [BrowserModule, FormsModule, ReactiveFormsModule, HttpClientModule],
   providers: [],

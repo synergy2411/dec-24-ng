@@ -15,4 +15,10 @@ export class PostsComponent implements OnInit {
   ngOnInit(): void {
     this.postService.getPosts().subscribe((posts) => (this.posts = posts));
   }
+
+  onAddNewPost(post: IPost) {
+    this.postService.createPost(post).subscribe((data) => {
+      this.posts.push(data);
+    });
+  }
 }
