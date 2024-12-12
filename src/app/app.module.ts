@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { UsersComponent } from './components/users/users.component';
@@ -19,6 +20,8 @@ import { ObservableDemoComponent } from './components/playground/observable-demo
 import { ObservableSubjectDemoComponent } from './components/playground/observable-subject-demo/observable-subject-demo.component';
 import { PostsComponent } from './components/posts/posts.component';
 import { PostFormComponent } from './components/posts/post-form/post-form.component';
+import { APP_ROUTES } from './app.routes';
+import { MainNavigationComponent } from './components/main-navigation/main-navigation.component';
 
 @NgModule({
   declarations: [
@@ -38,8 +41,15 @@ import { PostFormComponent } from './components/posts/post-form/post-form.compon
     ObservableSubjectDemoComponent,
     PostsComponent,
     PostFormComponent,
+    MainNavigationComponent,
   ],
-  imports: [BrowserModule, FormsModule, ReactiveFormsModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    RouterModule.forRoot(APP_ROUTES),
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
