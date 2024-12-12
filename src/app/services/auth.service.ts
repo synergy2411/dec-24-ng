@@ -19,6 +19,8 @@ const firebaseAuth = getAuth(firebaseApp);
   providedIn: 'root',
 })
 export class AuthService {
+  private token: string = '';
+
   constructor() {}
 
   async onUserSignUp(email: string, password: string) {
@@ -40,6 +42,7 @@ export class AuthService {
         .then((userCredentials) => {
           userCredentials.user.getIdToken().then((token) => {
             console.log('TOKEN : ', token);
+            this.token = token;
             observer.next({ token });
             observer.complete();
           });
@@ -48,5 +51,13 @@ export class AuthService {
           observer.error({ errorMessage: err.message });
         });
     });
+  }
+
+  isAuthenticated() {
+    return this.token != '';
+  }
+
+  getToken() {
+    return this.token;
   }
 }
