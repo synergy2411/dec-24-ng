@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectorRef, Component } from '@angular/core';
 
 @Component({
   selector: 'app-pipe-demo',
@@ -6,6 +6,11 @@ import { Component } from '@angular/core';
   styleUrl: './pipe-demo.component.css',
 })
 export class PipeDemoComponent {
+  constructor(private cdRef: ChangeDetectorRef) {
+    // this.cdRef.reattach()
+    // this.cdRef.detach()
+  }
+
   todoCollection = [
     { label: 'shopping', status: 'pending' },
     { label: 'grocery', status: 'completed' },
