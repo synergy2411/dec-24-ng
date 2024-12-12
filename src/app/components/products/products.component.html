@@ -4,11 +4,19 @@
   <div class="col-4">
     <ul class="list-group">
       <li class="list-group-item">
-        <a routerLink="/products/overview">Overview</a>
+        <a routerLink="/products/overview/199/iPhone">Overview</a>
       </li>
       <li class="list-group-item">
-        <a routerLink="/products/specification">Specification</a>
+        <a
+          routerLink="/products/specification"
+          [queryParams]="{ description: 'This is an awesome product' }"
+          >Specification</a
+        >
       </li>
     </ul>
+  </div>
+
+  <div class="col-8">
+    <router-outlet></router-outlet>
   </div>
 </div>

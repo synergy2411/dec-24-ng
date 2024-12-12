@@ -7,6 +7,8 @@ import { UsersComponent } from './components/users/users.component';
 import { LoginGuard } from './services/guard/login.guard';
 import { loginNewGuard } from './services/guard/login-new.guard';
 import { ProductsComponent } from './components/products/products.component';
+import { OverviewComponent } from './components/products/overview/overview.component';
+import { SpecificationComponent } from './components/products/specification/specification.component';
 
 export const APP_ROUTES: Routes = [
   {
@@ -38,6 +40,10 @@ export const APP_ROUTES: Routes = [
   {
     path: 'products',
     component: ProductsComponent,
+    children: [
+      { path: 'overview/:productId/:name', component: OverviewComponent },
+      { path: 'specification', component: SpecificationComponent },
+    ],
   },
   {
     path: '**', // http://localhost:4200/non-existing-path
