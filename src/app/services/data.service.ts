@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { USER_DATA } from '../db/mocks';
+// import { USER_DATA } from '../db/mocks';
 import { HttpClient } from '@angular/common/http';
 import { User } from '../model/user.model';
 import { Observable } from 'rxjs';

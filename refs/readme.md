@@ -148,8 +148,13 @@ todoCollection.push(newItem);
 
 - ng g s services/data
 
+# Services -
+
+- DIP : Dependencuy Injection Principle
+- SRP : One service, one responsibility
+
 - Service Registration
-  - Root Module : Singleton instance will be available to all the components
+  - Root Module : Singleton instance will be available to all the components and other available services
   - Root Component: Singleton instance will be available to all the components of the app
   - Any other component: Singleton instance will be available to self and children components
 
@@ -174,6 +179,9 @@ todoCollection.push(newItem);
 - Observable : pipe(), subscribe()
 - Observer: next(), error(), complete()
 - Subjects : Observables + Observers
+- BehaviourSubject
+- ReplaySubject
+- AsyncSubject
 
 # JSON Server
 
@@ -181,3 +189,21 @@ todoCollection.push(newItem);
 - json-server -v
 - create db.json file
 - json-server --watch db.json
+
+# Firebase Cloud
+
+- npm install firebase (to add firebase SDK)
+
+apiKey: "AIzaSyCj5Cu46Bbsbgggui_JVwnAjFHm6y6EmJs",
+authDomain: "sk-dec-24-ng.firebaseapp.com",
+
+---
+
+# Day 04
+
+- Authentication
+- SPA
+- Modules
+- Debugging techniques
+- Tips and tricks
+- Deploy for hosting

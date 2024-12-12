@@ -7,6 +7,7 @@ import {
   ValidationErrors,
   Validators,
 } from '@angular/forms';
+import { AuthService } from '../../../services/auth.service';
 
 @Component({
   selector: 'app-sign-up',
@@ -24,7 +25,7 @@ export class SignUpComponent {
 
   signUpForm: FormGroup;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private authService: AuthService) {
     this.signUpForm = this.fb.group({
       email: this.email,
       password: this.password,
@@ -34,6 +35,10 @@ export class SignUpComponent {
 
   onSubmit() {
     console.log(this.signUpForm);
+    this.authService.onUserSignUp(
+      this.signUpForm.value.email,
+      this.signUpForm.value.password
+    );
   }
 
   private static hasExclamationValidator(
