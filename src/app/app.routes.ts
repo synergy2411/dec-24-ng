@@ -5,6 +5,7 @@ import { ObservableDemoComponent } from './components/playground/observable-demo
 import { PipeDemoComponent } from './components/playground/pipe-demo/pipe-demo.component';
 import { UsersComponent } from './components/users/users.component';
 import { LoginGuard } from './services/guard/login.guard';
+import { loginNewGuard } from './services/guard/login-new.guard';
 
 export const APP_ROUTES: Routes = [
   {
@@ -23,7 +24,7 @@ export const APP_ROUTES: Routes = [
   {
     path: 'users', // http://localhost:4200/users
     component: UsersComponent,
-    canActivate: [LoginGuard],
+    canActivate: [loginNewGuard],
   },
   {
     path: 'pipes', // http://localhost:4200/pipes

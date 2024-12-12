@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
+
 import { AuthService } from '../../../services/auth.service';
 
 @Component({
@@ -10,7 +12,7 @@ import { AuthService } from '../../../services/auth.service';
 export class LoginComponent {
   errorMessage: string = '';
 
-  constructor(private authService: AuthService) {}
+  constructor(private authService: AuthService, private router: Router) {}
 
   onSubmitForm(loginForm: NgForm) {
     console.log('Email : ', loginForm.value.email);
@@ -20,6 +22,7 @@ export class LoginComponent {
       .subscribe({
         next: (data) => {
           this.errorMessage = '';
+          this.router.navigateByUrl('/users');
         },
         error: (err) => {
           this.errorMessage = err.errorMessage;
