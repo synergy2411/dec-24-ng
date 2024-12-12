@@ -26,4 +26,8 @@ export class PipeDemoComponent {
   onAddTodo() {
     this.todoCollection.push({ label: 'New Todo', status: 'pending' });
   }
+
+  trackById(todo: { label: string; status: string }) {
+    return todo.label;
+  }
 }

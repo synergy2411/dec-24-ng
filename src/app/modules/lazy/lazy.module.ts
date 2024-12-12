@@ -14,4 +14,6 @@ const LAZY_ROUTES: Routes = [
   declarations: [IAmLazyComponent],
   imports: [CommonModule, RouterModule.forChild(LAZY_ROUTES)],
 })
-export class LazyModule {}
+export class LazyModule {
+  // x: string = 99;
+}
