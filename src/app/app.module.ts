@@ -22,6 +22,9 @@ import { PostsComponent } from './components/posts/posts.component';
 import { PostFormComponent } from './components/posts/post-form/post-form.component';
 import { APP_ROUTES } from './app.routes';
 import { MainNavigationComponent } from './components/main-navigation/main-navigation.component';
+import { ProductsComponent } from './components/products/products.component';
+import { OverviewComponent } from './components/products/overview/overview.component';
+import { SpecificationComponent } from './components/products/specification/specification.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +45,9 @@ import { MainNavigationComponent } from './components/main-navigation/main-navig
     PostsComponent,
     PostFormComponent,
     MainNavigationComponent,
+    ProductsComponent,
+    OverviewComponent,
+    SpecificationComponent,
   ],
   imports: [
     BrowserModule,

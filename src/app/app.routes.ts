@@ -6,6 +6,7 @@ import { PipeDemoComponent } from './components/playground/pipe-demo/pipe-demo.c
 import { UsersComponent } from './components/users/users.component';
 import { LoginGuard } from './services/guard/login.guard';
 import { loginNewGuard } from './services/guard/login-new.guard';
+import { ProductsComponent } from './components/products/products.component';
 
 export const APP_ROUTES: Routes = [
   {
@@ -33,6 +34,10 @@ export const APP_ROUTES: Routes = [
   {
     path: 'observable', // http://localhost:4200/observable
     component: ObservableDemoComponent,
+  },
+  {
+    path: 'products',
+    component: ProductsComponent,
   },
   {
     path: '**', // http://localhost:4200/non-existing-path

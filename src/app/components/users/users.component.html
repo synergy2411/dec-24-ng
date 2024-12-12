@@ -1,4 +1,6 @@
 <div class="container">
+  <h3 *ngIf="!users" class="display-4 text-center">Loading...</h3>
+
   <ul class="list-unstyled list-group">
     <li class="list-group-item mb-4" *ngFor="let user of users">
       <div class="row">
